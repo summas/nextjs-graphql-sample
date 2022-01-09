@@ -1,0 +1,10 @@
+overwrite: true
+schema:
+  - ${PRISMA_URL}:
+documents: 'queries/**/*.ts'
+generates:
+  types/generated/graphql.tsx:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
